@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Css card 2</title>
+<style>
+	body
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(45deg,#24006b,#f42f8c);
+}
+
+.container
+{
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+	grid-gap: 15px;
+	margin: 0 auto;
+}
+
+.container .card
+{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.container .card .face
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .card .face.face1
+{
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.container .card .face.face1:nth-child(1)
+.container .card .face.face1 h2
+{
+	margin: 0;
+	padding: 0;
+}
+
+.container .card .face.face2
+{
+	background: #111;
+	transition: 0.5s;
+}
+
+.container .card:nth-child(1) .face.face2
+{
+	background: linear-gradient(45deg, #3503ad, #f7308c);
+}
+
+.container .card:nth-child(2) .face.face2
+{
+	background: linear-gradient(45deg, #ccff00, #09afff);
+}
+
+.container .card:nth-child(3) .face.face2
+{
+	background: linear-gradient(45deg, #e91e63, #ffeb3b);
+}
+
+.container .card:hover .face.face2
+{
+	height: 60px;
+}
+
+.container .card .face.face2::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.container .card .face.face2 h2
+{
+	margin: 0;
+	padding: 0;
+	font-size: 10em;
+	color: seashell;
+	transition: 0.5s;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container .card:hover .face.face2 h2
+{
+	font-size: 2em;
+}
+
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="face face1">
+				<div class="content">
+					<h2>Hoth </h2>
+					<p>Hoth was a remote, icy planet that was the sixth planet in the star system of the same name. It notably hosted Echo Base, the temporary headquarters of the Alliance to Restore the Republic, until the Galactic Empire located the Rebels, initiating a major confrontation known as the Battle of Hoth.</p>
+				</div>
+			</div>
+			<div class="face face2">
+				<h2>01</h2>
+			</div>
+		</div>
+		<div class="card">
+			<div class="face face1">
+				<div class="content">
+					<h2>Exegol </h2>
+					<p>Exegol (also spelled Ixigul in ancient texts) was a dark desert planet located within the Unknown Regions that, according to legend, was the hidden redoubt world of the Sith. It was occupied by the Sith Lord Darth Sidious and the Sith Eternal by 35 ABY.</p>
+				</div>
+			</div>
+			<div class="face face2">
+				<h2>02</h2>
+			</div>
+		</div>
+		<div class="card">
+			<div class="face face1">
+				<div class="content">
+					<h2>Tatooine </h2>
+					<p>Tatooine (/ˌtætuˈiːn/) is a fictional desert planet that appears in the Star Wars space-opera franchise. It is a beige-colored, desolate world orbiting a pair of binary stars, and inhabited by human settlers and a variety of other life forms. The planet was first seen in the original 1977 film Star Wars.</p>
+				</div>
+			</div>
+			<div class="face face2">
+				<h2>03</h2>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
